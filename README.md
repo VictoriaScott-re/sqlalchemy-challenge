@@ -20,25 +20,29 @@ I'm planning a vacation to Honolulu, Hawaii, and I've conducted a climate analys
     - Query the last 12 months of precipitation data.
     - Load the results into a Pandas DataFrame and plot the data.
     - Print summary statistics for the precipitation data.
+    - [Precipitation Plot (Images/Precipitation_Plot.png)](Images/Precipitation_Plot.png)
 
 3. **Station Analysis**:
     - Calculate the total number of stations.
     - Find and list the most-active stations.
     - Query min, max, and avg temperatures for the most-active station.
     - Query the last 12 months of temperature observations for the most-active station and plot a histogram.
+    - [Temperature Histogram (Images/Temp_Histogram.png)](Images/Temp_Histogram.png)
   
 4. **Link**
-    - - [Jupyter Notebook (Surfs_Up/climate_starter.ipynb)](Surfs_Up/climate_starter.ipynb)
+    - [Jupyter Notebook (Surfs_Up/climate_starter.ipynb)](Surfs_Up/climate_starter.ipynb)
 
 ### Part 2: Design the Climate App
 I created a Flask API based on the queries developed in Part 1.
 
-- `/` : Landing page with all available routes.
+- [`/`](http://127.0.0.1:5000/) : Landing page with all available routes.
 - [`/api/v1.0/precipitation`](http://127.0.0.1:5000/api/v1.0/precipitation) : JSON representation of the last 12 months of precipitation data.
 - [`/api/v1.0/stations`](http://127.0.0.1:5000/api/v1.0/stations) : JSON list of stations.
 - [`/api/v1.0/tobs`](http://127.0.0.1:5000/api/v1.0/tobs) : JSON list of temperature observations for the previous year for the most-active station.
 - [`/api/v1.0/<start>`](http://127.0.0.1:5000/api/v1.0/2016-04-01) : JSON list of min, avg, and max temperatures for all dates greater than or equal to the start date.
 - [`/api/v1.0/<start>/<end>`](http://127.0.0.1:5000/api/v1.0/2016-04-01/2016-10-31) : JSON list of min, avg, and max temperatures for dates between the start and end date inclusive.
+
+- [App Code (Surfs_Up/app.py)](Surfs_Up/app.py)
 
 ### Best Dates to Visit Hawaii
 Based on the analysis, the best time to visit Hawaii would be during the months with the least precipitation and moderate temperatures, typically from April to October.
